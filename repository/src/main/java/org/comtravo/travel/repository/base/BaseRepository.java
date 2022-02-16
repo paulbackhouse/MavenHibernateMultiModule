@@ -1,4 +1,4 @@
-package org.comtravo.travel.repository.implementation;
+package org.comtravo.travel.repository.base;
 
 import java.sql.Timestamp;
 

@@ -1,6 +1,8 @@
 package org.comtravo.travel.controller;
 
+import org.comtravo.travel.domain.aggregates.UserBookingsAggregate;
 import org.comtravo.travel.domain.dto.UserDto;
+import org.comtravo.travel.domain.services.IBookingService;
 import org.comtravo.travel.domain.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +17,15 @@ import javax.websocket.server.PathParam;
 public class UserController {
 
     private final IUserService userService;
+    private final IBookingService bookingService;
 
     @Autowired
-    public UserController(IUserService _userService) {
-        userService = _userService;
+    public UserController(
+        IUserService userService,
+        IBookingService bookingService
+        ) {
+        this.userService = userService;
+        this.bookingService = bookingService;
     }
 
     @GetMapping("/users")
@@ -32,8 +39,8 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}/bookings")
-    public List<UserDto> GetUserBookings(@PathParam("id") int id) {
-        return null;
+    public UserBookingsAggregate GetUserBookings(@PathVariable("id") int id) {
+        return bookingService.GetByUserId(id);
     }    
 
     @PostMapping("/users")

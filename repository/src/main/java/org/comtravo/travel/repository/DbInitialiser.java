@@ -8,14 +8,13 @@ import java.util.Random;
 
 import org.comtravo.travel.domain.entities.BookingEntity;
 import org.comtravo.travel.domain.entities.UserEntity;
-import org.comtravo.travel.repository.implementation.BaseRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class DbInitialiser extends BaseRepository {
+public class DbInitialiser  {
 
     // java doesn't do lambda expression as method paramr
     // this is how you define it - because the java compiler - basically is lazy
