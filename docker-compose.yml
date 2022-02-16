@@ -1,0 +1,38 @@
+
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: "postgres"
+    restart: "always"
+    container_name: "postgres_pidb"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "trav3l1234"
+      POSTGRES_USER: "traveluser"
+      POSTGRES_DB: "travelDb"
+
+# seq compose
+# version: '3'
+# services:
+#   seq-input-gelf:
+#     image: datalust/seq-input-gelf:latest
+#     depends_on:
+#       - seq
+#     ports:
+#       - "12201:12201/udp"
+#     environment:
+#       SEQ_ADDRESS: "http://localhost:5341"
+#     restart: unless-stopped
+#   seq:
+#     image: datalust/seq:latest
+#     ports:
+#       - "5341:80"
+#     environment:
+#       ACCEPT_EULA: Y
+#     restart: unless-stopped
+#     volumes:
+#       - ./seq-data:/data
