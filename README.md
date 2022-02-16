@@ -30,6 +30,9 @@ I will assume **VS Code** is the editor of choice.
 - In one terminal (first time run)
 ```docker-compose up``` this will setup docker postgres image for you
   - Postgres GUI  https://www.pgadmin.org/download/ - although there are several others
+    - **Server** localhost
+    - **Port** 5432 
+    - Username and password in docker-compose.yml
 - Once the docker image is up and running locally (check docker)
   - In VS Code, press F5 - this will start the project up
   - If using IntelliJ, you might have to to Maven Install the first tiem you run the project https://stackoverflow.com/questions/40359336/will-intellij-idea-mvn-install-automatically-when-make-the-project. This might be applicable to VS Code as well the first time
