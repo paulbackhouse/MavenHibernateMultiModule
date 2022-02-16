@@ -24,6 +24,7 @@
 
         <!-- Annotated entity classes -->
         <mapping class="org.comtravo.travel.domain.entities.UserEntity"/>
+        <mapping class="org.comtravo.travel.domain.entities.BookingEntity"/>
         
     </session-factory>
 </hibernate-configuration>

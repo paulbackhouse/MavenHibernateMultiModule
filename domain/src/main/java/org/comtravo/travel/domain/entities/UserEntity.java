@@ -1,21 +1,25 @@
 package org.comtravo.travel.domain.entities;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import org.comtravo.travel.domain.entities.interfaces.IBaseCreatedModified;
 import org.hibernate.validator.constraints.Length;
-
-import java.sql.*;
 
 @Entity 
 @Table(name = "users")
-public class UserEntity implements Serializable{
+public class UserEntity implements IBaseCreatedModified, Serializable {
 
     public UserEntity() {}      
-
-    // definition
 
     @Id 
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,17 +49,17 @@ public class UserEntity implements Serializable{
 
     @Column(name = "Modified")
     @NotNull()
-    private Timestamp Modified; 
+    private Timestamp Modified;
 
     // get & set
-    
+
     public Integer getId() {
         return Id;
     }
 
     public void setId(Integer id) {
         Id = id;
-    }
+    }    
 
     public String getUsername() {
         return Username;
@@ -81,21 +85,23 @@ public class UserEntity implements Serializable{
         LastName = lastName;
     }
 
+    @Override
     public Timestamp getCreated() {
-        return Created;
+        return this.Created;
     }
 
+    @Override
     public void setCreated(Timestamp created) {
-        Created = created;
+        this.Created = created;        
     }
 
+    @Override
     public Timestamp getModified() {
-        return Modified;
+        return this.Modified;
     }
 
+    @Override
     public void setModified(Timestamp modified) {
-        Modified = modified;
+        this.Modified = modified;
     }
-
-
 }

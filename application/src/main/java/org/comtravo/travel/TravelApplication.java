@@ -43,4 +43,20 @@ public class TravelApplication {
         }
     }
 
+    /**
+     * Thoughts on Java 
+     * 
+     * Imagine a teenager, perhaps your own child. 
+     * 
+     * You ask said teenager to cut the lawn for you. It shouldn't take long and it would be a great help to you
+     * The teenager does not respond well - what follows is general moaning, complaints etc...
+     * 
+     * So you say, ok, fine, I will pay you to cut the lawn. Said teenager begrudgingly agrees - they need the money
+     * 
+     * Some time later, you checkin with the progress to find the teenager has done the BARE minimum...
+     * so you end up cutting the lawn yourself
+     * 
+     * That - is what java is... a lazy teenager
+    */
+
 }
