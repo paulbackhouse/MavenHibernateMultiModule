@@ -1,2 +1,59 @@
 # Maven Multi Module Project - Using Hibernate ORM
 
+This project is built in Java [Spring Boot Framework](https://spring.io/projects/spring-boot) with [BellSoft JDK](https://bell-sw.com/pages/downloads/#mn), with [Maven](https://maven.apache.org/) using the ORM [Hibernate](https://hibernate.org/) or database management.
+
+Database: Postgres
+
+Follwing Domain Drive Design, using a project with separate modules, as detailed at https://dzone.com/articles/ddd-spring-boot-multi-module-maven-project
+
+
+## IDEs
+
+As an editor, **VS Code** was my weapon of choice as I found it far easier to work with, debug and be productive with.
+
+**VS Code** has some excellent extensions to help develop and debug in Java/Spring Boot/Maven
+
+- Extensions https://code.visualstudio.com/docs/java/java-spring-boot
+- Basic project setup https://code.visualstudio.com/docs/java/java-spring-boot#_create-the-project
+
+However, I used IntelliJ Community Edition to setup the project with the modules as I found it easier to set the project and modules up in IntelliJ (https://www.codejava.net/ides/intellij/create-multi-module-maven-project-intellij)
+
+In hindsight, I could now set the multi module project up in VS Code, with a bit of manual effort,
+
+## Setup 
+
+I will assume **VS Code** is the editor of choice.
+
+- Download repo
+- Open top level project (root) folder in VS Code
+- split the terminal view
+- In one terminal (first time run)
+```docker-compose up``` this will setup docker postgres image for you
+  - Postgres GUI  https://www.pgadmin.org/download/ - although there are several others
+- Once the docker image is up and running locally (check docker)
+  - In VS Code, press F5 - this will start the project up
+  - If using IntelliJ, you might have to to Maven Install the first tiem you run the project https://stackoverflow.com/questions/40359336/will-intellij-idea-mvn-install-automatically-when-make-the-project. This might be applicable to VS Code as well the first time
+
+This should start the project up for you - check the terminal
+
+### API Endpoints:
+
+- GET Users: http://localhost:8080/users?pageindex=0&pagesize=10
+- GET User Bookings: http://localhost:8080/users/{userId}/bookings
+- POST Create/Update User: http://localhost:8080/users
+
+## Project Structure
+
+It is a module project, which follows DDD principles
+
+- **application** the web application
+- **webapi** the web api module layer
+- **services** the business service module layer, implementations of domain service interfaces
+- **repository** the repository module later, implementations of domain repository interfaces
+- **domain** the core domain, which describes domain behaviour (interfaces), entities, dtos, aggregates 
+
+### What in the pom in this? (pom.xml)
+
+This is a project/module config file. It describes the meta data and dependencies of the project and modules and other properties (such as plugins).
+
+See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,Maven%20to%20build%20the%20project.&text=Other%20information%20such%20as%20the,such%20can%20also%20be%20specified.
