@@ -57,3 +57,13 @@ It is a module project, which follows DDD principles
 This is a project/module config file. It describes the meta data and dependencies of the project and modules and other properties (such as plugins).
 
 See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,Maven%20to%20build%20the%20project.&text=Other%20information%20such%20as%20the,such%20can%20also%20be%20specified.
+
+## Useful Exercises
+
+Here are something that you could try as part of a learning path:
+
+- Create new Booking Api controller and some simple GET, POST methods
+- Try adding delete logic for Bookings
+- Create some unit tests in java
+- Create a new entity and associated logic, perhaps payments for each booking
+- Spring Boot support microservices development https://spring.io/microservices 
