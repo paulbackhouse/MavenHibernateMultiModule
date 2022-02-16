@@ -54,7 +54,7 @@ It is a module project, which follows DDD principles
 - **repository** the repository module later, implementations of domain repository interfaces
 - **domain** the core domain, which describes domain behaviour (interfaces), entities, dtos, aggregates 
 
-### What in the pom in this? (pom.xml)
+### What in the pom is this? (pom.xml)
 
 This is a project/module config file. It describes the meta data and dependencies of the project and modules and other properties (such as plugins).
 
