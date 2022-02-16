@@ -53,11 +53,6 @@ public class DbInitialiser  {
 
     private static boolean HasImportedRows(Session session, String tableName) {
 
-        // hibernate uses its own query language, hql - which is basically dog shite
-        // why would you not just use pure sql? 
-        // the better question is WHY SHOULD YOU BE WRITING TEXT AT ALL WITH AN ORM!!!???
-        // oh yeh, because hibernate is crap as well, wait until you see the "criteria" nonsense to query with conditions!
-        // is hands down, the better ORM - System.Linq makes it easy to query - java/hibernate - its 2022!
         var sql = String.format("select count(*) FROM %s tbl", tableName);
         var query = session.createSQLQuery(sql);
         var count = ((BigInteger)query.uniqueResult()).longValue();

@@ -14,8 +14,15 @@ public class UserRepository extends BaseRepository implements IUserRepository {
     public List<UserEntity> Get(int pageIndex, int pageSize) {
         
          return UsingDbWithResult(db -> {
-            var results = findAll(UserEntity.class, db, pageIndex, pageSize);
-            return results;
+
+            // note: this is hql
+            // query the Class name an properties
+            // this is mapped in the hibernate.cfg.xml file
+            var query = db.createQuery("from UserEntity u", UserEntity.class);
+            query.setFirstResult(pageIndex);
+            query.setMaxResults(pageSize);            
+            var users = query.getResultList();
+            return users;
         });
     }
 

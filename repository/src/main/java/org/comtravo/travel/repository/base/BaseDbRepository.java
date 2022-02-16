@@ -39,18 +39,7 @@ public class BaseDbRepository {
                             				.buildSessionFactory();
 
         return sessionFactory.openSession();
-    }
-
-    protected <T> List<T> findAll(Class<T> type, Session session, int pageIndex, int pageSize) {
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> criteria = builder.createQuery(type);
-        criteria.from(type);
-        var query = session.createQuery(criteria);
-        query.setFirstResult(pageIndex);
-        query.setMaxResults(pageSize);
-        List<T> data = query.getResultList();
-        return data;
-      }      
+    }   
 
     protected void UsingDb(IUseDbSession dbSession) {
 
