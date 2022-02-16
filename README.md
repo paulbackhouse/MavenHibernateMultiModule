@@ -43,6 +43,13 @@ Of Note: Model Mapper is implemented, see http://modelmapper.org/getting-started
 - GET Users: http://localhost:8080/users?pageindex=0&pagesize=10
 - GET User Bookings: http://localhost:8080/users/{userId}/bookings
 - POST Create/Update User: http://localhost:8080/users
+```js   
+{
+  "username": "",
+  "givenName": "",
+  "lastName": ""
+}
+```
 
 ## Project Structure
 
