@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 
 @RestController
 public class UserController {
@@ -29,6 +30,11 @@ public class UserController {
         var result = userService.Get(pageIndex, pageSize);
         return result;
     }
+
+    @GetMapping("/users/{id}/bookings")
+    public List<UserDto> GetUserBookings(@PathParam("id") int id) {
+        return null;
+    }    
 
     @PostMapping("/users")
     @ResponseStatus(HttpStatus.CREATED)
