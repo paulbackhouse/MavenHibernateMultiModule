@@ -61,7 +61,7 @@ It is a module project, which follows DDD principles
 - **application** the web application
 - **webapi** the web api module layer
 - **services** the business service module layer, implementations of domain service interfaces
-- **repository** the repository module later, implementations of domain repository interfaces
+- **repository** the repository module layer, implementations of domain repository interfaces
 - **domain** the core domain, which describes domain behaviour (interfaces), entities, dtos, aggregates 
 
 ### What in the pom is this? (pom.xml)
