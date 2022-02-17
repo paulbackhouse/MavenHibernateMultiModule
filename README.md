@@ -75,7 +75,8 @@ See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:
 Here are some ideas on exercises that you could try as part of a learning path:
 
 - Create new Booking Api controller and some simple GET, POST methods
-- Try adding delete logic for Bookings
+- Add delete logic for Bookings
+- Add filter criteria for GET users endpoint, for example, filter by lastname and/or given name 
 - Create some unit tests in java
 - Create a new entity and associated logic, perhaps payments for each booking
 - Async is enabled in the application, try creating async methods and logic
