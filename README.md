@@ -72,7 +72,7 @@ See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:
 
 ## Useful Exercises
 
-Here are something that you could try as part of a learning path:
+Here are some ideas on exercises that you could try as part of a learning path:
 
 - Create new Booking Api controller and some simple GET, POST methods
 - Try adding delete logic for Bookings
