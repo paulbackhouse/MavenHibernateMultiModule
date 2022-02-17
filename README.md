@@ -1,6 +1,6 @@
 # Maven Multi Module Project - Using Hibernate ORM
 
-This project is built in Java [Spring Boot Framework](https://spring.io/projects/spring-boot) with [BellSoft JDK](https://bell-sw.com/pages/downloads/#mn), with [Maven](https://maven.apache.org/) using the ORM [Hibernate](https://hibernate.org/) or database management.
+This project is built in Java [Spring Boot Framework](https://spring.io/projects/spring-boot) with [BellSoft JDK](https://bell-sw.com/pages/downloads/#mn), with [Maven](https://maven.apache.org/) using the ORM [Hibernate](https://hibernate.org/) for database management.
 
 Database: Postgres, local docker, see https://levelup.gitconnected.com/creating-and-filling-a-postgres-db-with-docker-compose-e1607f6f882f
 
@@ -35,7 +35,7 @@ I will assume **VS Code** is the editor of choice.
     - Username and password in docker-compose.yml
 - Once the docker image is up and running locally (check docker)
   - In VS Code, press F5 - this will start the project up
-  - If using IntelliJ, you might have to to Maven Install the first tiem you run the project https://stackoverflow.com/questions/40359336/will-intellij-idea-mvn-install-automatically-when-make-the-project. This might be applicable to VS Code as well the first time
+  - If using IntelliJ, you might have to run Maven Install the first tiem you run the project https://stackoverflow.com/questions/40359336/will-intellij-idea-mvn-install-automatically-when-make-the-project. This might be applicable to VS Code as well the first time
 
 This should start the project up for you - check the terminal
 
