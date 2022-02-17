@@ -78,4 +78,5 @@ Here are something that you could try as part of a learning path:
 - Try adding delete logic for Bookings
 - Create some unit tests in java
 - Create a new entity and associated logic, perhaps payments for each booking
+- Async is enabled in the application, try creating async methods and logic
 - Spring Boot support microservices development https://spring.io/microservices 

@@ -58,7 +58,7 @@ public class TravelApplication {
      * Some time later, you checkin with the progress to find the teenager has done the BARE minimum...
      * so you end up cutting the lawn yourself
      * 
-     * That - is what java is... a lazy teenager
+     * That - is what java is... a lazy teenager. The potential is there - it is just currently being a dick about it
     */
 
 }
