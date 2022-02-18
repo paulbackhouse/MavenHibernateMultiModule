@@ -81,7 +81,9 @@ Here are some ideas on exercises that you could try as part of a learning path:
 - Create a new entity and associated logic, perhaps payments for each booking
 - Async is enabled in the application, try creating async methods and logic
 - Spring Boot support microservices development https://spring.io/microservices 
-  - Create a microservce, perhaps look into SQS, create event to create new booking
+  - Create a microservce or lambda, perhaps look into SQS, create event to create new booking
   - You could create a POST endpoint in booking controller and publish an event, wich is handled by microservice
-  - https://www.netsurfingzone.com/aws/spring-boot-aws-sqs-listener-example/
-  - https://spring.io/blog/2019/10/15/simple-event-driven-microservices-with-spring-cloud-stream
+  - Spring Docs: https://spring.io/blog/2019/10/15/simple-event-driven-microservices-with-spring-cloud-stream
+  - Spring Docs: https://spring.io/serverless
+  - Docker SQS: https://hub.docker.com/r/roribio16/alpine-sqs/
+  - AWS SQS Tutorial: https://www.netsurfingzone.com/aws/spring-boot-aws-sqs-listener-example/
