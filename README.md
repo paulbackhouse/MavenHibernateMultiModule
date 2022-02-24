@@ -1,7 +1,13 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Maven Multi Module Project - Using Hibernate ORM](#maven-multi-module-project---using-hibernate-orm)
+# Maven Multi Module Project - Using Hibernate ORM
+
+  - [Overview](#overview)
   - [IDEs](#ides)
+  - [Setup](#setup)
+    - [API Endpoints:](#api-endpoints)
+  - [Project Structure](#project-structure)
+    - [What in the pom is this? (pom.xml)](#what-in-the-pom-is-this-pomxml)
+  - [PluralSight Channels](#pluralsight-channels)
+  - [Useful Exercises](#useful-exercises)  - [IDEs](#ides)
   - [Setup](#setup)
     - [API Endpoints:](#api-endpoints)
   - [Project Structure](#project-structure)
@@ -9,8 +15,7 @@
   - [PluralSight Channels](#pluralsight-channels)
   - [Useful Exercises](#useful-exercises)
 
-# Maven Multi Module Project - Using Hibernate ORM
-
+## Overview 
 This project is built in Java [Spring Boot Framework](https://spring.io/projects/spring-boot) with [BellSoft JDK](https://bell-sw.com/pages/downloads/#mn), with [Maven](https://maven.apache.org/) using the ORM [Hibernate](https://hibernate.org/) for database management.
 
 Database: Postgres, local docker, see https://levelup.gitconnected.com/creating-and-filling-a-postgres-db-with-docker-compose-e1607f6f882f
