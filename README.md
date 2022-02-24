@@ -8,12 +8,6 @@
     - [What in the pom is this? (pom.xml)](#what-in-the-pom-is-this-pomxml)
   - [PluralSight Channels](#pluralsight-channels)
   - [Useful Exercises](#useful-exercises)  - [IDEs](#ides)
-  - [Setup](#setup)
-    - [API Endpoints:](#api-endpoints)
-  - [Project Structure](#project-structure)
-    - [What in the pom is this? (pom.xml)](#what-in-the-pom-is-this-pomxml)
-  - [PluralSight Channels](#pluralsight-channels)
-  - [Useful Exercises](#useful-exercises)
 
 ## Overview 
 This project is built in Java [Spring Boot Framework](https://spring.io/projects/spring-boot) with [BellSoft JDK](https://bell-sw.com/pages/downloads/#mn), with [Maven](https://maven.apache.org/) using the ORM [Hibernate](https://hibernate.org/) for database management.
