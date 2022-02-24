@@ -6,6 +6,14 @@ Database: Postgres, local docker, see https://levelup.gitconnected.com/creating-
 
 Follwing Domain Drive Design, using a project with separate modules, as detailed at https://dzone.com/articles/ddd-spring-boot-multi-module-maven-project
 
+- [Maven Multi Module Project - Using Hibernate ORM](#maven-multi-module-project---using-hibernate-orm)
+  - [IDEs](#ides)
+  - [Setup](#setup)
+    - [API Endpoints:](#api-endpoints)
+  - [Project Structure](#project-structure)
+    - [What in the pom is this? (pom.xml)](#what-in-the-pom-is-this-pomxml)
+  - [PluralSight Channels](#pluralsight-channels)
+  - [Useful Exercises](#useful-exercises)
 
 ## IDEs
 
