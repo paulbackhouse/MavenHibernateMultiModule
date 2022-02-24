@@ -70,6 +70,11 @@ This is a project/module config file. It describes the meta data and dependencie
 
 See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:~:text=A%20Project%20Object%20Model%20or,Maven%20to%20build%20the%20project.&text=Other%20information%20such%20as%20the,such%20can%20also%20be%20specified.
 
+## PluralSight Channels
+- Channel: [Java Spring Boot](https://app.pluralsight.com/channels/details/1f82f563-adf4-40be-9987-c5a5ac14f321)  
+- Channel: [Spring Framework: Building Web Applications and Services](https://app.pluralsight.com/paths/skill/spring-framework-building-web-applications-and-services)
+- Channel: [Java SE 11 Developer Certification Path](https://app.pluralsight.com/channels/details/a5482e34-0ab9-48f8-9c3e-964020eb0253)
+
 ## Useful Exercises
 
 Here are some ideas on exercises that you could try as part of a learning path:
