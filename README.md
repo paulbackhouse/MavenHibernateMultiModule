@@ -1,6 +1,7 @@
 # Maven Multi Module Project - Using Hibernate ORM
 
   - [Overview](#overview)
+  - [Pre-requisities](#pre-requisities)
   - [IDEs](#ides)
   - [Setup](#setup)
     - [API Endpoints:](#api-endpoints)
@@ -15,6 +16,10 @@ This project is built in Java [Spring Boot Framework](https://spring.io/projects
 Database: Postgres, local docker, see https://levelup.gitconnected.com/creating-and-filling-a-postgres-db-with-docker-compose-e1607f6f882f
 
 Follwing Domain Drive Design, using a project with separate modules, as detailed at https://dzone.com/articles/ddd-spring-boot-multi-module-maven-project
+
+## Pre-requisities
+- Install the JDK mentioned above, verify in terminal with ```java --version```
+- Install Maven ```brew install maven```, verify in terminal with ```mvn --v```
 
 ## IDEs
 
