@@ -11,9 +11,10 @@ import org.comtravo.travel.domain.entities.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class DbInitialiser  {
 
     // java doesn't do lambda expression as method paramr
@@ -22,8 +23,6 @@ public class DbInitialiser  {
         void Each(Integer i);
     }
     
-    private static final Logger logger = LoggerFactory.getLogger(DbInitialiser.class);
-
     public static void OnInitialise(String[] args) {
 
         SessionFactory sessionFactory = null;
@@ -31,7 +30,7 @@ public class DbInitialiser  {
 
         try {
 
-            logger.info("Database initialising");
+            log.info("Database initialising");
 
             sessionFactory = new Configuration()
                                         .configure()
@@ -43,7 +42,7 @@ public class DbInitialiser  {
 
         }
         catch (Exception e) {
-            logger.error("Failed to initialise database", e);
+            log.error("Failed to initialise database", e);
         }
         finally {
             session.close();
@@ -57,7 +56,7 @@ public class DbInitialiser  {
         var query = session.createSQLQuery(sql);
         var count = ((BigInteger)query.uniqueResult()).longValue();
 
-        logger.info(String.format("Table '%s' has %d records", tableName, count));
+        log.info(String.format("Table '%s' has %d records", tableName, count));
 
         return count > 0;
     }
@@ -83,7 +82,7 @@ public class DbInitialiser  {
     private static void ImportUsers(Session session) {
 
         if (!HasImportedRows(session, "users")) {
-            logger.info("Importing rows in 'users' table");
+            log.info("Importing rows in 'users' table");
 
             String[] givenNames = { "John", "Paul", "Jane", "Camila", "Clare", "Karl", "George", "Daisy", "Phillip", "Victoria", "Matthew", "Milli", "Remy", "Bethany", "Nina", "Sarah", "Sam" };
             String[] lastNames = { "Smith", "Schmitt", "Jameson", "Donald", "McTommin", "Windsor", "Conner" };
@@ -123,7 +122,7 @@ public class DbInitialiser  {
     private static void ImportBookings(Session session) {
 
         if (!HasImportedRows(session, "bookings")) {
-            logger.info("Importing rows in 'bookings' table");
+            log.info("Importing rows in 'bookings' table");
 
             var query = session.createSQLQuery("select tbl.id FROM users tbl");
             var userIds = query.getResultList();

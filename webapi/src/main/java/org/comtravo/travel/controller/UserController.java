@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class UserController {
 
@@ -45,6 +48,7 @@ public class UserController {
 
     @GetMapping("/users/{id}/bookings")
     public UserBookingsAggregate GetUserBookings(@PathVariable("id") int id) {
+        log.info("Getting bookings for user "+ id);
         return bookingService.GetByUserId(id);
     }    
 

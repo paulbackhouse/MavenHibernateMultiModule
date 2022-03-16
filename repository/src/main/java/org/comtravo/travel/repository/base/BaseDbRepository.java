@@ -1,10 +1,5 @@
 package org.comtravo.travel.repository.base;
 
-import java.util.List;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-
 import org.comtravo.travel.repository.implementation.UserRepository;
 import org.comtravo.travel.repository.implementation.interfaces.IUseDbSession;
 import org.comtravo.travel.repository.implementation.interfaces.IUseDbSessionWithResult;
