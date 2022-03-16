@@ -17,6 +17,11 @@ Database: Postgres, local docker, see https://levelup.gitconnected.com/creating-
 
 Follwing Domain Drive Design, using a project with separate modules, as detailed at https://dzone.com/articles/ddd-spring-boot-multi-module-maven-project
 
+## What TA use as wel
+- LomBok https://projectlombok.org/features/all - java util library - added in this project at parent pom.xml
+- QueryDSL http://querydsl.com/ - Unified queries for Java
+- LiquiBase https://liquibase.org/ - DB migration, manage schema changes
+
 ## Pre-requisities
 - Install the JDK mentioned above, verify in terminal with ```java --version```
 - Install Maven ```brew install maven```, verify in terminal with ```mvn --v```

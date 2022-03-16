@@ -5,6 +5,9 @@ import java.util.List;
 import org.comtravo.travel.domain.entities.BookingEntity;
 import org.comtravo.travel.domain.entities.UserEntity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class UserBookingsAggregate extends UserEntity {
     
     public UserBookingsAggregate(
@@ -19,13 +22,7 @@ public class UserBookingsAggregate extends UserEntity {
         this.setBookings(bookings);
     }
 
+    @Getter @Setter
     private List<BookingEntity> Bookings;
 
-    public List<BookingEntity> getBookings() {
-        return Bookings;
-    }
-
-    public void setBookings(List<BookingEntity> bookings) {
-        Bookings = bookings;
-    }
 }
