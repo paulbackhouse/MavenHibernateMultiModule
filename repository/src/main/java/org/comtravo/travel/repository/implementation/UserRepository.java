@@ -7,7 +7,7 @@ import org.comtravo.travel.domain.repository.IUserRepository;
 import org.comtravo.travel.repository.base.BaseRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository 
 public class UserRepository extends BaseRepository implements IUserRepository {
 
     @Override
