@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.comtravo.travel.domain.dto.BookingDto;
 import org.comtravo.travel.domain.services.IBookingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ public class BookingController {
     
     private final IBookingService bookingService;
 
+    @Autowired
     public BookingController(IBookingService bookingService) {
         this.bookingService = bookingService;
     }
