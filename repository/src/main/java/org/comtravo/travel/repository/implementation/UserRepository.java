@@ -2,6 +2,7 @@ package org.comtravo.travel.repository.implementation;
 
 import java.util.List;
 
+import org.comtravo.travel.domain.entities.QUserEntity;
 import org.comtravo.travel.domain.entities.UserEntity;
 import org.comtravo.travel.domain.repository.IUserRepository;
 import org.comtravo.travel.repository.base.BaseRepository;
@@ -15,14 +16,19 @@ public class UserRepository extends BaseRepository implements IUserRepository {
         
          return UsingDbWithResult(db -> {
 
-            // note: this is hql
-            // query the Class name an properties
-            // this is mapped in the hibernate.cfg.xml file
-            var query = db.createQuery("from UserEntity u order by u.LastName asc, u.GivenName asc", UserEntity.class);
-            query.setFirstResult(pageIndex * pageSize);
-            query.setMaxResults(pageSize);            
-            var users = query.getResultList();
-            return users;
+            var user = GetQueryEntity();
+            var query = CreateQuery(db);
+            var lst = query
+                        .from(user)
+                        .orderBy(
+                                user.LastName.asc(),
+                                user.GivenName.asc()
+                        )
+                        .offset(pageIndex * pageSize)   
+                        .limit(pageSize)
+                        .list(user);  
+
+            return lst;
         });
     }
 
@@ -43,4 +49,8 @@ public class UserRepository extends BaseRepository implements IUserRepository {
             });
         }
     }
+
+    private QUserEntity GetQueryEntity() {
+        return QUserEntity.userEntity;
+    }    
 }
