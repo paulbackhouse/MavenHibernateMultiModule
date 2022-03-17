@@ -16,6 +16,7 @@ public class UserRepository extends BaseRepository implements IUserRepository {
         
          return UsingDbWithResult(db -> {
 
+            // query dsl example
             var user = GetQueryEntity();
             var query = CreateQuery(db);
             var lst = query
@@ -45,6 +46,7 @@ public class UserRepository extends BaseRepository implements IUserRepository {
         if (IsValid(user)) {
             
             UsingDbWithTransaction(db -> {
+                // hibernate query example
                 db.saveOrUpdate(user);
             });
         }
