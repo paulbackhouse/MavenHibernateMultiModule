@@ -40,12 +40,24 @@ public class BaseDbRepository {
 
     /** 
      * @summary creates  new HibernateQuery which can be used with QueryDSL
+     * @see     http://querydsl.com/
      * @see     http://querydsl.com/static/querydsl/1.1.0/reference/html/ch02s02.html
     */
     protected HibernateQuery CreateQuery(Session session) {
         return new HibernateQuery(session);
     }
 
+        /**
+     * @summary                     Creates a db connection (session)
+     * @param dbTransactionSession  Lambda expression which passes the open db 'session'
+     * @return                      Returns T - based on output of the method
+     * @example                     
+     * UsingDb(db -> { 
+     *      ...
+     *      // some db query logic
+     *      ...
+     * });
+     */
     protected void UsingDb(IUseDbSession dbSession) {
 
         Session session = null;
@@ -63,6 +75,19 @@ public class BaseDbRepository {
         }
     } 
     
+    /**
+     * @summary                     Creates a db connection (session)
+     * @param dbTransactionSession  Lambda expression which passes the open db 'session'
+     * @return                      Returns T - based on output of the method
+     * @example                     
+     * UsingDbWithResult<SomeEntity>(db -> { 
+     *      ...
+     *      // some code to get some records from Database
+     *      var results = db.get(SomeEntity.class); // a db query
+     *      ... 
+     *      return results;
+     * });
+     */
     protected <T> T UsingDbWithResult(IUseDbSessionWithResult<T> dbSession) {
 
         Session session = null;
@@ -83,6 +108,16 @@ public class BaseDbRepository {
         return result;
     }     
 
+    /**
+     * @summary                     Creates a db connection with an active transaction and simple error handling
+     * @param dbTransactionSession  Lambda expression which passes the open db 'session'
+     * @example                     
+     * UsingDbWithTransaction(db -> { 
+     *      ... 
+     *      // some db query logic
+     *      ... 
+     * });
+     */
     protected void UsingDbWithTransaction(IUseDbSession dbTransactionSession) {
 
         UsingDb(dbSession -> {
