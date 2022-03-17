@@ -11,13 +11,33 @@
 
     <artifactId>repository</artifactId>
 
-    <dependencies>
+    <dependencies>        
+
         <dependency>
             <groupId>org.comtravo</groupId>
             <artifactId>domain</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-hql</artifactId>
+            <version>1.9.7</version>
+          </dependency>
+    
+          <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-core</artifactId>
+            <version>1.9.7</version>
+          </dependency>
+    
+          <dependency>
+            <groupId>com.mysema.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+            <version>1.9.7</version>
+          </dependency>      
+
     </dependencies>
 
 </project>

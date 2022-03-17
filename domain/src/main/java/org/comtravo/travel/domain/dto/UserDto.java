@@ -48,4 +48,6 @@ public class UserDto {
         return String.format("%1$s %2$s", this.GivenName, this.LastName);
     }
 
+    
+
 }

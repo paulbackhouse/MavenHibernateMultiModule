@@ -1,5 +1,7 @@
 package org.comtravo.travel.repository.base;
 
+import com.mysema.query.hql.hibernate.HibernateQuery;
+
 import org.comtravo.travel.repository.implementation.UserRepository;
 import org.comtravo.travel.repository.implementation.interfaces.IUseDbSession;
 import org.comtravo.travel.repository.implementation.interfaces.IUseDbSessionWithResult;
@@ -35,6 +37,14 @@ public class BaseDbRepository {
 
         return sessionFactory.openSession();
     }   
+
+    /** 
+     * @summary creates  new HibernateQuery which can be used with QueryDSL
+     * @see     http://querydsl.com/static/querydsl/1.1.0/reference/html/ch02s02.html
+    */
+    protected HibernateQuery CreateQuery(Session session) {
+        return new HibernateQuery(session);
+    }
 
     protected void UsingDb(IUseDbSession dbSession) {
 
@@ -90,5 +100,7 @@ public class BaseDbRepository {
             }
         });                
     }
+
+
 
 }

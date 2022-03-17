@@ -17,6 +17,7 @@ public class UserService extends BaseService implements IUserService {
 
     private final IUserRepository userRepository;
 
+
     @Autowired
     public UserService(IUserRepository _userRepository) {
         userRepository = _userRepository;
