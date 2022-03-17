@@ -13,14 +13,18 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BookingRespository extends BaseRepository implements IBookingRepository {
 
-    public List<BookingEntity> Get() {
+    public List<BookingEntity> Get(int pageIndex, int pageSize) {
         return UsingDbWithResult(db -> {
 
-            var bookings = GetQueryEntity();
+            // queryDSL paging example
+            var booking = GetQueryEntity();
             var query = CreateQuery(db);
             var lst = query
-                        .from(bookings)
-                        .list(bookings);
+                        .from(booking)
+                        .orderBy(booking.Created.desc())
+                        .offset(pageIndex * pageSize)
+                        .limit(pageSize)
+                        .list(booking);
 
             return lst;
         });        
@@ -30,25 +34,20 @@ public class BookingRespository extends BaseRepository implements IBookingReposi
 
         return UsingDbWithResult(db -> {
 
+            // simple Hibernate query
             var user = (UserEntity) db.get(UserEntity.class, userId);
 
             if (user == null) {
                 throw new IllegalArgumentException("User record not found for userId "+ userId);
             }
 
-            var bookings = GetQueryEntity();
+            // queryDsl example
+            var booking = GetQueryEntity();
             var query = CreateQuery(db);
             var lst = query
-                        .from(bookings)
-                        .where(bookings.UserId.eq(userId))
-                        .list(bookings);
-
-            // note: this is hql
-            // query the Class name an properties
-            // this is mapped in the hibernate.cfg.xml file
-            // var query = db.createQuery("from BookingEntity b where b.UserId = :userId", BookingEntity.class);
-            // query.setParameter("userId", userId);
-            // var bookings = query.getResultList();
+                        .from(booking)
+                        .where(booking.UserId.eq(userId))
+                        .list(booking);
                 
             return new UserBookingsAggregate(user, lst); 
         });
