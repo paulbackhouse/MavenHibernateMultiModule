@@ -43,6 +43,8 @@ In hindsight, I could now set the multi module project up in VS Code, with a bit
 
 I will assume **VS Code** is the editor of choice.
 
+maven clean & build cmd (in terminal window) ```mvn clean install```
+
 - Download repo
 - Open top level project (root) folder in VS Code
 - split the terminal view
