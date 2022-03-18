@@ -64,6 +64,7 @@ Of Note: Model Mapper is implemented, see http://modelmapper.org/getting-started
 
 - GET Users: http://localhost:8080/users?pageindex=0&pagesize=10
 - GET User Bookings: http://localhost:8080/users/{userId}/bookings
+- GET Bookings: http://localhost:8080/bookings?pageindex=0&pagesize=10
 - POST Create/Update User: http://localhost:8080/users
 ```js   
 {
@@ -98,7 +99,8 @@ See: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#:
 
 Here are some ideas on exercises that you could try as part of a learning path:
 
-- Create new Booking Api controller and some simple GET, POST methods
+- Update Booking Api controller and add a POST method to create a booking
+- Add logic to get a booking for a given booking Id
 - Add delete logic for Bookings
 - Add filter criteria for GET users endpoint, for example, filter by lastname and/or given name 
 - Create some unit tests in java
