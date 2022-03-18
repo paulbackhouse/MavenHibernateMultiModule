@@ -19,7 +19,7 @@ Follwing Domain Drive Design, using a project with separate modules, as detailed
 
 ## What TA use as wel
 - LomBok https://projectlombok.org/features/all - java util library - added in this project at parent pom.xml
-- QueryDSL http://querydsl.com/ - Unified queries for Java
+- QueryDSL http://querydsl.com/ - Unified queries for Java - added in this project at domain and repository pom.xml
 - LiquiBase https://liquibase.org/ - DB migration, manage schema changes
 
 ## Pre-requisities
